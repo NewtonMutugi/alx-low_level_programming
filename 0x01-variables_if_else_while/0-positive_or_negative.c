@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <time.h>
+
+
+#define RAND_MAX 10000
+/**
+ * main - entry point for the program
+ *
+ * Description - Random number checker
+ *
+ * Return: 0 (success)
+*/
+
+int main(void)
+{
+	int n;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	/* your code goes there */
+
+	if (n % 2 == 0)
+		printf("%d is positive\n", n);
+	else
+		printf("%d is negative\n", n);
+
+	return (0);
+}
