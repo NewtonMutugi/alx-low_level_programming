@@ -22,9 +22,8 @@ int main(void)
 			for (k = 'A'; k <= 'Z'; k++)
 			{
 				putchar(k);
-				if (c == 'Z')
-					putchar('\n');
 			}
+		putchar('\n');
 		}
 	}
 	return (0);
