@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 
-
-#define RAND_MAX 10000
 /**
  * main - entry point for the program
  *
