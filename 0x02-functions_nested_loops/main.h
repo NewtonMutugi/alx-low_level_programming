@@ -10,14 +10,6 @@
   * Return: void no return type
   */
 
-void print_alphabet(void)
-{
-	char letter;
-
-	for (letter = 'a'; letter <= 'z'; letter++)
-	{
-		putchar(letter);
-	}
-	putchar('\n');
-}
+void print_alphabet(void);
+int _putchar(char c);
 #endif
