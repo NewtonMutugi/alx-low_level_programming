@@ -1,18 +1,33 @@
 #include "main.h"
 
 /**
- * print_numbers - print 0-9
+ * print_diagonal - draws a diagonal
+ *
+ * @n: number that stores the number of times
  *
  * Return: void
+ *
  */
 
-void print_numbers(void)
+void print_diagonal(int n)
 {
-	int i;
+	int i, j;
 
-	for (i = 0; i < 10; i++)
+	if (n > 0)
 	{
-		_putchar(i + '0');
+		for (i = 0; i < n; i++)
+		{
+			for (j = 0; j < i; j++)
+			{
+				_putchar(' ');
+			}
+			_putchar('\\');
+			_putchar('\n');
+		}
 	}
-	_putchar('\n');
+	else
+	{
+		_putchar('\n');
+	}
 }
+
