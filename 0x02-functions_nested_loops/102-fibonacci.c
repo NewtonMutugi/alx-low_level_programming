@@ -17,7 +17,7 @@ int main(void)
 		sum = num1 + num2;
 		num1 = num2;
 		num2 = sum;
-		printf("%d", sum);
+		printf("%ld", sum);
 		if (i != 47)
 			printf(", ");
 	}
