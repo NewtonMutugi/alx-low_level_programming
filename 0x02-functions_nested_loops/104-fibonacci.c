@@ -25,7 +25,7 @@ int length_of_number(int n)
  * main - Entry point
  *
  * Description: prints the first 98 Fibonacci numbers, starting with 1 and 2
- * 		followed by a new line
+ * followed by a new line
  *
  * Return: 0 if success
  *
@@ -33,24 +33,37 @@ int length_of_number(int n)
 
 int main(void)
 {
-	int i, length;
-	long int num1, num2, sum;
+	int n, original;
+	unsigned long num1 = 1, num2 = 2, sum, mx = 100000000,
+	num1z = 0, num2z = 0, sumz = 0;
 
-	num1 = 1;
-	num2 = 2;
-	printf("%ld, %ld, ", num1, num2);
-	for (i = 0; i < 96; i++)
+	for (n = 1; n <= 98; ++n)
 	{
-		sum = num1 + num2;
+		if (num1z > 0)
+			printf("%lu", num1z);
+		original = numLength(mx) - 1 - numLength(num1);
+
+		while (num1z > 0 && original > 0)
+		{
+			printf("%d", 0);
+			--original;
+		}
+
+		printf("%lu", num1);
+
+		sum = (num1 + num2) % mx;
+		sumz = num1z + num2z + (num1 + num2) / mx;
 		num1 = num2;
+		num1z = num2z;
 		num2 = sum;
-		length = length_of_number(sum);
-		if (length == 1)
-			printf(" ");
-		printf("%ld", sum);
-		if (i != 95)
+		num2z = sumz;
+
+		if (n != 98)
 			printf(", ");
+		else
+			printf("\n");
 	}
-	printf("\n");
+
 	return (0);
 }
+
