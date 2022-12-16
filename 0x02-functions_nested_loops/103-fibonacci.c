@@ -9,6 +9,7 @@
 int main(void)
 {
 	unsigned long int num1, num2, sum;
+	float t_sum;
 
 	num1 = 0;
 	num2 = 1;
@@ -21,13 +22,13 @@ int main(void)
 			break;
 		if (sum % 2 == 0)
 		{
-			sum += sum;
+			t_sum += sum;
 		}
 		num1 = num2;
 		num2 = sum;
 
 	}
-	printf("%ld", sum);
+	printf("%.0f\n", t_sum);
 
 	return (0);
 }
