@@ -21,10 +21,12 @@ int main(void)
 		if (sum > 4000000)
 			break;
 		if (sum % 2 == 0)
-			printf("%ld, ", sum);
+		{
+			num1 = num2;
+			num2 = sum;
+		}
+		printf("%ld", sum)
 
-		num1 = num2;
-		num2 = sum;
 	}
 
 	printf("\n");
