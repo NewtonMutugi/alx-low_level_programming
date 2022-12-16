@@ -41,7 +41,7 @@ int main(void)
 	{
 		if (num1z > 0)
 			printf("%lu", num1z);
-		original = numLength(mx) - 1 - numLength(num1);
+		original = length_of_number(mx) - 1 - length_of_number(num1);
 
 		while (num1z > 0 && original > 0)
 		{
