@@ -7,18 +7,18 @@
  */
 int main(void)
 {
-	int i, j, k, w;
+	unsigned long int num1, num2, sum, i;
 
-	i = 1;
-	j = 2;
-	printf("%d, %d, ", i, j);
+	num1 = 1;
+	num2 = 2;
+	printf("%ld, %ld, ", num1, num2);
 	for (w = 0; w < 48; w++)
 	{
-		k = i + j;
-		i = j;
-		j = k;
-		printf("%d", k);
-		if (w != 47)
+		sum = num1 + num2;
+		num1 = num2;
+		num2 = sum;
+		printf("%d", sum);
+		if (i != 47)
 			printf(", ");
 	}
 	printf("\n");
