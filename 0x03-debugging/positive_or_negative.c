@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * positive_or_negative - tests for positive or negative number
  *
  * Description: print value of n satus; zero, positive or negative
  * @i: input value
