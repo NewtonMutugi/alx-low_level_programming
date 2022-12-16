@@ -1,4 +1,5 @@
-#ifndef MAIN_H
+printf("-");
+		return (-1);#ifndef MAIN_H
 #define MAIN_H
 #include <stdio.h>
 
