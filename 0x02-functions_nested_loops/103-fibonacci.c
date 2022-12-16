@@ -13,18 +13,20 @@ int main(void)
 	num1 = 1;
 	num2 = 2;
 	printf("%ld, %ld, ", num1, num2);
-	for (i = 0; i < 48; i++)
+
+	while (1)
 	{
 		sum = num1 + num2;
+
+		if (sum > 4000000)
+			break;
+		if (sum % 2 == 0)
+			printf("%ld, ", sum);
+
 		num1 = num2;
 		num2 = sum;
-		if (sum % 2 == 0)
-		{
-			printf("%ld", sum);
-			if (i != 47)
-				printf(", ");
-		}
 	}
+
 	printf("\n");
 	return (0);
 }
