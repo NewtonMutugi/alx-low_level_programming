@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
- * positive_or_negative - tests for positive or negative number
+ * main - Entry point
  *
- * Description: print value of n satus; zero, positive or negative
- * @i: input value
+ * Description: prints if i is positive or negative
+ * @i: stores an int value
  *
  * Return: Always 0 (Success)
 */
