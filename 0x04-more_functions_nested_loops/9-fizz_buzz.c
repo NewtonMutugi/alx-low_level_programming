@@ -8,7 +8,7 @@
  * Return: Always 0
 
  */
-int fizz_buzz(void)
+int main(void)
 {
 	int i;
 
