@@ -12,7 +12,6 @@ int main(void)
 
 	num1 = 1;
 	num2 = 2;
-	printf("%ld, %ld, ", num1, num2);
 
 	while (1)
 	{
