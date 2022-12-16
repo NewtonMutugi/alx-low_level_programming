@@ -1,12 +1,11 @@
 #include <stdio.h>
 
 /**
- * fizz_buzz - prints the numbers from 1 to 100, but multiples of
+ * main - prints the numbers from 1 to 100, but multiples of
  * three print fizz instead of the number and multiples of 5 print
  * buzz
  *
  * Return: Always 0
-
  */
 int main(void)
 {
@@ -35,4 +34,5 @@ int main(void)
 			printf(" ");
 		}
 	}
+	return (0);
 }
