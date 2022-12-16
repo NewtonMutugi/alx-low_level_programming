@@ -22,13 +22,13 @@ int main(void)
 			break;
 		if (sum % 2 == 0)
 		{
-			num1 = num2;
-			num2 = sum;
+			sum += sum;
 		}
-		printf("%ld", sum)
+		num1 = num2;
+		num2 = sum;
 
 	}
+	printf("%ld", sum);
 
-	printf("\n");
 	return (0);
 }
