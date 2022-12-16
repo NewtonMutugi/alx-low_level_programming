@@ -12,7 +12,7 @@ int main(void)
 	num1 = 1;
 	num2 = 2;
 	printf("%ld, %ld, ", num1, num2);
-	for (w = 0; w < 48; w++)
+	for (i = 0; i < 48; i++)
 	{
 		sum = num1 + num2;
 		num1 = num2;
