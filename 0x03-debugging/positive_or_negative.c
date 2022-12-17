@@ -1,27 +1,29 @@
 #include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 
 /**
- * main - Entry point
+ * positive_or_negative - entry point for the program
  *
- * Description: prints if i is positive or negative
- * @i: stores an int value
+ * Description - Random number checker
+ * @i: parameter
  *
- * Return: Always 0 (Success)
+ * Return: 0 (success)
 */
 
-void positive_or_negative(int i)
+void positive_or_negative(int n)
 {
-	/* my if statement */
-	if (i == 0)
-	{
-		printf("%d is zero\n", i);
-	}
-	else if (i > 0)
-	{
-		printf("%d is positive\n", i);
-	}
+
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	/* your code goes there */
+
+	if (n > 0)
+		printf("%d is positive\n", n);
+	else if (n < 0)
+		printf("%d is negative\n", n);
 	else
-	{
-		printf("%d is negative\n", i);
-	}
+		printf("%d is zero\n", n);
+
 }
