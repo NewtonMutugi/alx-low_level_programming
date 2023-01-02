@@ -15,11 +15,7 @@ void reverse_array(int *a, int n)
 	int *j = malloc(n * sizeof(int));
 	int count = 0;
 
-	/*if (j == NULL || a == NULL)
-	{
-		printf("Memory not allocated.\n");
-		exit(0);
-	}*/
+
 
 	for (i = n - 1; i >= 0; i--)
 	{
@@ -32,3 +28,8 @@ void reverse_array(int *a, int n)
 	}
 
 }
+/*if (j == NULL || a == NULL)
+	{
+		printf("Memory not allocated.\n");
+		exit(0);
+	}*/
