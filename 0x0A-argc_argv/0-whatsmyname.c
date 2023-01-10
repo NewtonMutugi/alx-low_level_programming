@@ -6,12 +6,14 @@
  *
  * @argc: Number of arguments supplied
  * @argv: array of pointers to the string
- * Return - EXIT_SUCCESS if successful
+ * Return: EXIT_SUCCESS if successful
  */
 
 int main(int argc, char **argv)
 {
-        while(argc--)
-                printf("%s\n", *argv++);
-        exit(EXIT_SUCCESS);
+	while (argc--)
+	{
+		printf("%s\n", *argv++);
+	}
+	exit(EXIT_SUCCESS);
 }
