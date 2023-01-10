@@ -13,8 +13,6 @@ int main(int argc, char *argv[])
 {
 	int count;
 
-	printf("This program was called with \"%s\".\n", argv[0]);
-
 	for (count = 1; count < argc; count++)
 	{
 		printf("%s\n", argv[count]);
