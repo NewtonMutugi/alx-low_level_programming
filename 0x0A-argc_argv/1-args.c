@@ -9,12 +9,13 @@
  * Return: EXIT_SUCCESS if successful
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char __attribute__((unused)) *argv[])
 {
 	int i, num;
 
 	for (i = 0; i < argc; i++)
 		num = i;
-	printf("%s\n", num);
+	printf("%d\n", num);
 	return (0);
+
 }
