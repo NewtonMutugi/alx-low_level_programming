@@ -6,7 +6,7 @@
  *
  * @argc: Number of arguments supplied
  * @argv: array of pointers to the string
- * Return: EXIT_SUCCESS if successful
+ * Return: 0 if successful
  */
 
 int main(int argc, char *argv[])
@@ -15,6 +15,6 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < argc; i++)
 		printf("%s\n", argv[i]);
-	return (EXIT_SUCCESS);
+	return (0);
 
 }

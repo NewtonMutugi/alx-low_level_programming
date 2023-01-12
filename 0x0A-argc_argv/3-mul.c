@@ -6,7 +6,7 @@
  *
  * @argc: Number of arguments supplied
  * @argv: array of pointers to the string
- * Return: EXIT_SUCCESS if successful, 1 if failed.
+ * Return: 0 if successful, 1 if failed.
  */
 
 int main(int argc, char __attribute__((unused)) *argv[])
@@ -21,8 +21,9 @@ int main(int argc, char __attribute__((unused)) *argv[])
 	else
 	{
 		num = atoi(argv[1]) * atoi(argv[2]);
+		printf("%d\n", num);
 	}
-	printf("%d\n", num);
-	return (EXIT_SUCCESS);
+
+	return (0);
 
 }
