@@ -6,7 +6,7 @@
  *
  * @argc: Number of arguments supplied
  * @argv: array of pointers to the string
- * Return: EXIT_SUCCESS if successful
+ * Return: EXIT_SUCCESS if successful, 1 if failed.
  */
 
 int main(int argc, char __attribute__((unused)) *argv[])
@@ -16,7 +16,7 @@ int main(int argc, char __attribute__((unused)) *argv[])
 	if (argc != 3)
 	{
 		printf("Error\n");
-		return (EXIT_FAILURE);
+		return (1);
 	}
 	else
 	{
