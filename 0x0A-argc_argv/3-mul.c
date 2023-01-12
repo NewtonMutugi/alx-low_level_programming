@@ -9,12 +9,20 @@
  * Return: EXIT_SUCCESS if successful
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char __attribute__((unused)) *argv[])
 {
-	int i;
+	int num;
 
-	for (i = 0; i < argc; i++)
-		printf("%s\n", argv[i]);
+	if (argc != 3)
+	{
+		printf("Kindly provide only 3 arguments");
+		return (EXIT_FAILURE);
+	}
+	else
+	{
+		num = atoi(argv[1]) * atoi(argv[2]);
+	}
+	printf("%d\n", num);
 	return (EXIT_SUCCESS);
 
 }
