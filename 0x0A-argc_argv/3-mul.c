@@ -15,7 +15,7 @@ int main(int argc, char __attribute__((unused)) *argv[])
 
 	if (argc != 3)
 	{
-		printf("Kindly provide only 3 arguments");
+		printf("Error\n");
 		return (EXIT_FAILURE);
 	}
 	else
