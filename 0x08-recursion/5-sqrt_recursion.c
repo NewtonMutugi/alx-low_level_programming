@@ -20,6 +20,8 @@ int _sqrt_finder(int n, int min, int max)
 		return (mid);
 	else if (min == max)
 		return (-1);
+	else if (n < 0)
+		return (-1);
 	else if (mid_squared < n)
 		return (_sqrt_finder(n, mid + 1, max));
 	else
