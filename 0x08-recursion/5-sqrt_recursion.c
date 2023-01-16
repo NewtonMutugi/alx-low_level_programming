@@ -11,15 +11,19 @@
 
 int _sqrt_finder(int n, int min, int max)
 {
-	int mid = (min + max) / 2;
+	int mid, mid_squared;
 
-	if (min > max)
-		return (-1);
-	if (mid * mid == n)
+	mid = (min + max) / 2;
+	mid_squared = mid * mid;
+
+	if (mid_squared == n)
 		return (mid);
-	if (mid * mid > n)
+	else if (min == max)
+		return (-1);
+	else if (mid_squared < n)
+		return (_sqrt_finder(n, mid + 1, max));
+	else
 		return (_sqrt_finder(n, min, mid - 1));
-	return (_sqrt_finder(n, mid + 1, max));
 }
 
 
@@ -32,13 +36,13 @@ int _sqrt_finder(int n, int min, int max)
 
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-	{
-		return (-1);
-	}else if (n == 1)
+	if (n == 1)
 	{
 		return (1);
 	}
-
+	else if (n == 0)
+	{
+		return (0);
+	}
 	return (_sqrt_finder(n, 0, n));
 }
