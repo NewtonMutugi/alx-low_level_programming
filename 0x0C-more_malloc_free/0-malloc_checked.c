@@ -3,7 +3,7 @@
 /**
  * malloc_checked -  function that allocates memory using malloc
  *
- * b: size of the memory to allocate
+ * @b: size of the memory to allocate
  *
  * Return: pointer to the allocated memory,
  * normal process termination with a status value of 98
