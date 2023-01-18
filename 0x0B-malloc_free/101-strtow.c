@@ -1,54 +1,101 @@
-#include "main.h"
+#include <stdlib.h>
 
 /**
- * strtow - function that splits a string into words.
+ * count - get word count from string
+ *             without spaces
  *
- * @str: string to split
+ * @str: string to count words present
  *
- * Return: pointer to an array of strings (words)
+ * Return: The number of words
+*/
+
+int count(char *str)
+{
+	int w = 0;
+
+	while (*str != '\0')
+	{
+		/*skip spaces*/
+		if (*str == ' ')
+			str++;
+		else
+		{
+			/*count words*/
+			while (*str != ' ' && *str != '\0')
+				str++;
+			w++;
+		}
+	}
+	return (w);
+}
+
+/**
+ * free_arr - free arr[i]
  *
- */
+ * @ar: array to free
+ * @i: array[i]
+ *
+ * Return: nothing
+*/
+
+void free_arr(char **ar, int i)
+{
+	if (ar != NULL && i != 0)
+	{
+		while (i >= 0)
+		{
+			free(ar[i]);
+			i--;
+		}
+		free(ar);
+	}
+}
+
+/**
+ * strtow - split a string to words
+ *
+ * @str: string to split.
+ *
+ * Return: NULL if it fails
+*/
 
 char **strtow(char *str)
 {
-	int i, j, k, l, m, n;
-	char **s;
+	int i, s, j, str_l, w;
+	char **string;
 
-	if (str == NULL || str[0] == '\0')
+	if (str == NULL || *str == '\0')
 		return (NULL);
-	for (i = 0, k = 0; str[i] != '\0'; i++)
+
+	str_l = count(str);
+	/*return null if str_l == 0 || new == NULL*/
+	string = malloc((str_l + 1) * sizeof(char *));
+	if (str_l == 0 || string == NULL)
+		return (NULL);
+
+	for (i = s = 0; i < str_l; i++)
 	{
-		if (str[i] != ' ')
+		for (w = s; str[w] != '\0'; w++)
 		{
-			while (str[i] != ' ' && str[i] != '\0')
-				i++, k++;
-		}
-	}
-	if (k == 0)
-		return (NULL);
-	s = malloc(sizeof(char *) * (k + 1));
-	if (s == NULL)
-		return (NULL);
-	for (i = 0, l = 0; str[i] != '\0'; i++)
-	{
-		if (str[i] != ' ')
-		{
-			for (j = i; str[j] != ' ' && str[j] != '\0'; j++)
-				;
-			s[l] = malloc(sizeof(char) * (j - i + 1));
-			if (s[l] == NULL)
+			if (str[w] == ' ')
+				s++;
+
+			if (str[w] != ' ' && (str[w + 1] == ' ' || str[w + 1] == '\0'))
 			{
-				for (m = 0; m < l; m++)
-					free(s[m]);
-				free(s);
-				return (NULL);
+				string[i] = malloc((w - s + 2) * sizeof(char));
+				if (string[i] == NULL)
+				{
+					free_arr(string, i);
+					return (NULL);
+				}
+				break;
 			}
-			for (n = 0; i < j; i++, n++)
-			s[l][n] = str[i];
-			s[l][n] = '\0';
-			l++;
 		}
+
+		for (j = 0; s <= w; s++, j++)
+			string[i][j] = str[s];
+		string[i][j] = '\0';
 	}
-	s[l] = NULL;
-	return (s);
+	string[i] = NULL;
+	return (string);
 }
