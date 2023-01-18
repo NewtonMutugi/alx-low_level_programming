@@ -28,7 +28,6 @@ int is_palindrome_rec(char *s, int first, int last)
 
 
 
-
 /**
  * is_palindrome - function that checks if a string is
  * a palindrome
