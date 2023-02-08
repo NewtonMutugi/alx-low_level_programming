@@ -7,9 +7,14 @@
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <elf.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
 
 #define BUF_SIZE 1024
 #define ERR_MSG_LEN 50
+#define MAGIC_LEN 4
+#define ELF_HEADER_SIZE 52
 
 int _putchar(char c);
 ssize_t read_textfile(const char *filename, size_t letters);
