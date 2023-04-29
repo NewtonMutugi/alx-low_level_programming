@@ -1,5 +1,16 @@
-#include "main.h"
+//#include "main.h"
 #include <stdio.h>
+
+double factorial(double n)
+{
+	if (n < 0)
+		return (-1);
+	else if (n == 0)
+		return (1);
+	else
+		return (n * factorial(n - 1));
+}
+
 
 /**
  * main - check the code
@@ -8,15 +19,15 @@
  */
 int main(void)
 {
-    int r;
+    double r;
 
     r = factorial(1);
-    printf("%d\n", r);
+    printf("%lf\n", r);
     r = factorial(5);
-    printf("%d\n", r);
-    r = factorial(10);
-    printf("%d\n", r);
+    printf("%lf\n", r);
+    r = factorial(4000);
+    printf("%lf\n", r);
     r = factorial(-1024);
-    printf("%d\n", r);
+    printf("%lf\n", r);
     return (0);
 }
