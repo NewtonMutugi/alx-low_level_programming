@@ -1,3 +1,4 @@
+# VARIABLES
 # the compiler to be used
 CC = gcc
 # the .c files
@@ -9,6 +10,7 @@ NAME = school
 # the program to delete files
 RM = rm
 
+#RULES
 #  builds your executable
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
