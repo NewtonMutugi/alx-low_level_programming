@@ -1,1 +1,3 @@
-# alx-low_level_programming
+# ALX Low Level Programming
+
+- Reattempting this module for fun :)
